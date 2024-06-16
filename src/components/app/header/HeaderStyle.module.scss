@@ -1,0 +1,48 @@
+@import "/src/globalStyle/variables";
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+    h1{
+        width: 50%;
+        font-weight: bold;
+        font-size: 24 px;
+        span{
+            color: $bg-form-btn;
+        }
+    }
+    .btn-wrapper{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        button{
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background: $bg-form-btn;
+            font-size: 16px;
+            color: white;
+            &:active{
+                opacity: 0.5;
+            }
+        }
+    }
+    form{
+        display: none;
+        width: 50%;
+        input{
+            width: 100%;
+            padding: 10px 10px;
+            border-radius: 10px;
+            border: 1px solid $bg-form-btn;
+            background: #e2e1e1;
+            &::placeholder{
+                color: $bg-form-btn;
+            }
+        }
+    }
+}

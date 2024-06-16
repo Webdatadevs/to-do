@@ -1,0 +1,72 @@
+@import "/src/globalStyle/variables";
+.container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+    .wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        .task-content {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 10px;
+            background: rgba(139, 5, 32, 0.8);
+            padding: 20px;
+            span {
+                position: absolute;
+                top: 2px;
+                left: 5px;
+                font-size: 14px;
+                color: #fff;
+            }
+            .task-name {
+                font-size: 18px;
+                color: #fff;
+            }
+            .desc {
+                font-size: 14px;
+                color: silver;
+            }
+            p {
+                margin-top: 5px;
+            }
+            .btn {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #fff;
+                border-radius: 20px;
+                button {
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+                    background: none;
+                    font-size: 18px;
+                    &:active {
+                        opacity: 0.5;
+                    }
+                }
+                button:nth-child(1) {
+                    color: crimson;
+                }
+                button:nth-child(2) {
+                    color: dodgerblue;
+                }
+                button:nth-child(3) {
+                    color: mediumseagreen;
+                }
+            }
+        }
+        .ispending {
+            background: $bg-form-btn;
+        }
+    }
+}

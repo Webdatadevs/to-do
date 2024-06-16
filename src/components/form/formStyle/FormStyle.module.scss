@@ -1,0 +1,84 @@
+@import "/src/globalStyle/variables";
+.container {
+    display: flex;
+    justify-content: center;
+    .content {
+        backdrop-filter: blur(22px) saturate(200%);
+        -webkit-backdrop-filter: blur(22px) saturate(200%);
+        background-color: rgba(17, 25, 40, 0.39);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        h2{
+            padding: 5px;
+            margin-bottom: 5px;
+            color: $bg-form-btn;
+        }
+        .form {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            gap: 30px;
+            label {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                position: relative;
+                input {
+                    padding: 10px;
+                    background: none;
+                    outline: none;
+                    border: none;
+                    color: $bg-form-text;
+                    font-size: 16px;
+                    width: 100%;
+                    &::placeholder {
+                        color: rgb(128, 118, 118);
+                    }
+                }
+                .underline {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: #ffffff;
+                    transition: width 0.7s ease;
+                }
+                input:hover + .underline,
+                input:focus + .underline {
+                    width: 100%;
+                }
+                span {
+                    color: #fff;
+                    font-weight: 400;
+                }
+            }
+            button {
+                padding: 15px;
+                background: $bg-form-btn;
+                border: none;
+                color: $bg-form-text;
+                cursor: pointer;
+                margin-top: 15px;
+            }
+        }
+        button {
+            padding: 10px;
+            background: crimson;
+            border: none;
+            color: $bg-form-text;
+            cursor: pointer;
+            margin: 10px 0px;
+            width: 100%;
+        }
+        a {
+            color: $bg-form-btn;
+            margin: 10px 0px;
+        }
+    }
+}

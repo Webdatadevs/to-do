@@ -1,0 +1,71 @@
+@import "/src/globalStyle/variables";
+.container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap-reverse;
+    .wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        .task-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: dodgerblue;
+            padding: 20px;
+            .task-name {
+                font-size: 18px;
+                color: #fff;
+            }
+            .desc {
+                font-size: 14px;
+                color: silver;
+            }
+            p {
+                margin-top: 5px;
+            }
+            .btn {
+                width: 100%;
+                display: flex;
+                // justify-content: space-around;
+                justify-content: end;
+                align-items: center;
+                gap: 20px;
+                button {
+                    border-radius: 2px;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 24px;
+                    background: none;
+                    &:active {
+                        opacity: 0.5;
+                    }
+                }
+                button:nth-child(1) {
+                    color: crimson;
+                }
+                button:nth-child(2) {
+                    color: $bg-form-btn;
+                }
+            }
+            .texts {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .text {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    span {
+                        font-size: 14px;
+                        color: silver;
+                    }
+                }
+            }
+        }
+    }
+}

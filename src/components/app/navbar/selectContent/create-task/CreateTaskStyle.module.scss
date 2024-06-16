@@ -1,0 +1,32 @@
+.wrapper{
+    position: sticky;
+    top: 50px;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+        label{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            span{
+                font-size: 18px;
+            }
+            input{
+                padding: 10px;
+            }
+        }
+        button{
+            padding: 10px;
+            background: dodgerblue;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}

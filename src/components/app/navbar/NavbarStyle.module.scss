@@ -1,0 +1,50 @@
+@import "/src/globalStyle/variables"; /* Ensure this path is correct */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+    .modal-wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        // justify-content: center;
+        margin-bottom: 30px;
+        .modals {
+            padding: 10px;
+            box-shadow: 0px 2px 4px rgb(193, 192, 192), 0px 0px 4px rgb(193, 192, 192);
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Add a transition for smooth transform */
+    
+            &:hover {
+                transform: translateY(-5px); /* Example of hover effect */
+            }
+    
+            &.modal-active {
+                animation: pulse 1s infinite; /* Apply pulse animation for modal-active */
+                animation-timing-function: linear;
+                background: dodgerblue; /* Use the variable from global styles */
+                color: #fff;
+            }
+        }
+    }
+}
+
+// @keyframes pulse {
+//     0% {
+//         transform: translateY(0px);
+//     }
+//     25% {
+//         transform: translateY(2px);
+//     }
+//     50% {
+//         transform: translateY(-4px);
+//     }
+//     75% {
+//         transform: translateY(-2px);
+//     }
+//     100% {
+//         transform: translateY(0px);
+//     }
+// }
